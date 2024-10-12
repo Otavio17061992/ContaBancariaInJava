@@ -1,0 +1,16 @@
+{
+  "name": "Java Development",
+  "image": "mcr.microsoft.com/devcontainers/java:0-17",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ],
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/local/openjdk-17"
+      }
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven && mvn clean install"
+}
+
